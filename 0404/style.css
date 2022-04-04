@@ -103,6 +103,7 @@ fieldset{
 }
 
 .text{
+    height: 30px;
     margin-top: 15px;
     border-top:none;
     border-left: none;
