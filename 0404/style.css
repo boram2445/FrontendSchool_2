@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+/* 초기화 코드 */
+body{
+    margin: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1, h2, fieldset,p{
+    font-size: initial;
+    font-weight: initial;
+    margin: initial;
+    padding: initial;
+}
+
+fieldset{
+    border: none;
+}
+
+a{
+  text-decoration: none;  
+}
+
+button{
+    box-shadow: none;
+    border: none;
+    cursor: pointer;
+    background-color: initial;
+}
+
+/* 스타일 코드 */
+body{
+    background-color: rgb(244, 237, 250);
+    color: rgb(99, 93, 93);
+}
+
+h1{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+h2{
+    font-weight: 500;
+    font-size: 15px;
+    padding-bottom: 12px;
+}
+
+a{
+    color: rgb(0, 81, 255);
+}
+
+label{
+    padding: 5px 0;
+}
+
+.wrapper{
+    width: 650px ;
+    margin: 20px auto;
+}
+
+.header, fieldset{
+    border: 1px #ddd solid;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.header, footer{
+    margin: 15px;
+}
+
+.header{
+    border-top: 11px rgb(108, 41, 172) solid;
+}
+
+.header h1{
+    padding: 10px 20px;
+}
+
+.header p{
+    padding: 10px 20px;
+}
+
+.header .email{
+    border-top: #ddd 1px solid;
+    font-size: 15px;
+}
+
+fieldset{
+    margin: 15px;
+    padding: 20px;
+}
+
+.select{
+    display: flex;
+    flex-direction: column;
+}
+
+.select input{
+    height: 20px;
+    margin-right: 12px;
+    height: inherit;
+}
+
+.text{
+    margin-top: 15px;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    color:rgb(167, 166, 166);
+}
+
+.text.ambi{
+    width: 250px;
+}
+
+.text.moti{
+    width: 100%;
+}
+
+.no_question{
+    width: 240px;
+    height: 45px;
+    border: 1px #ddd solid ;
+    border-radius: 5px;
+    color: rgb(167, 166, 166);
+    font-size: 13px;
+    font-weight: 600;
+    padding-left:10px;
+    margin-top: 10px;
+}
+
+.box{
+   display: flex;
+   flex-direction: column;
+}
+
+.date, .time, .submit{
+    font-size: small;
+    color: gray;
+}
+
+.box input{
+    width: 150px;
+    height: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: #ddd solid 1px; 
+    padding-top: 5px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit{
+    background-color: rgb(111, 52, 165);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+}
+
+.submit:hover, .reset:hover{
+    opacity: 0.8;
+}
+
+.reset{
+    color:rgb(111, 52, 165);
+    font-weight: 600;
+}

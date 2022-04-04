@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goggle form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="#">
+            <!-- Header -->
+            <header class="header">
+                <h1>나와 잘 맞는 회사는?</h1>
+                <p>가고 싶은 회사에 대한 호감도를 조사합니다. 아이고 의미없다.</p>
+                <p class="email">helloworld@gmail.com (공유되지 않음) <a href="#">계정 전환</a></p>
+            </header>
+            <!-- main -->
+            <main>
+                <fieldset>
+                    <h2>다음 문자중에 왠지 마음에 드는 것을 하나 고르세요</h2>
+                    <div class="select">
+                        <label><input type="radio" name="like" value="naver" required>네</label>
+                        <label><input type="radio" name="like" value="kakao">카</label>
+                        <label><input type="radio" name="like" value="line">라</label>
+                        <label><input type="radio" name="like" value="cupang">쿠</label>
+                        <label><input type="radio" name="like" value="zecobe">베</label>
+                    </div>
+                </fieldset>
+    
+                <fieldset >
+                    <h2>친구와 문자를 합니다. 다음중 어떤 메신저를 이용하시겠습니까? 모두 골라주세요.</h2>
+                    <div class="select"> 
+                        <label><input type="checkbox" name="use" value="kakao">카카오톡</label>
+                        <label><input type="checkbox"name="use" value="line">라인</label>
+                        <label><input type="checkbox"name="use" value="insta">인스타그램 디엠</label>
+                        <label><input type="checkbox" name="use" value="nateon">네이트온</label>
+                        <label><input type="checkbox" name="use" value="budi">버디버디</label>
+                    </div>
+                </fieldset>
+    
+                <fieldset>
+                    <h2>면접에서 자신의 포부를 한 문장으로 얘기한다면?</h2>
+                    <input type="text" name="ambition" placeholder="내 답변" class="text ambi" required>
+                </fieldset>
+    
+                <fieldset>
+                    <h2>당신은 지금 한 기업의 최종면접을 앞두고 있습니다. 면접장에 들어가기 직전, 자기 자신에게 해주고 싶은말은?</h2>
+                    <input type="text" name="motivation" placeholder="내 답변" class="text moti" required>
+                </fieldset>
+    
+                <fieldset>
+                    <h2>다음 중 기술 면접때 듣고 싶은 질문이 아닌 것은?</h2>
+                    <select name="no_question" required class="no_question">
+                        <option value="">선택</option>
+                        <option value="watermelon">🍉</option>
+                        <option value="pineapple">🍍</option>
+                        <option value="apple">🍎</option>
+                        <option value="kiwi">🥝</option>
+                    </select>
+                </fieldset>
+    
+                <fieldset>
+                    <h2>취업을 희망하는 날짜를 선택해주세요</h2>
+                    <div class="box">
+                        <label for="date" class="date">날짜</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                </fieldset>
+    
+                <fieldset>
+                    <h2>업무를 시작 하기에 가장 적당한 시간을 고르세요</h2>
+                    <div class="box">
+                        <label for="time" class="time">시간</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </fieldset>
+            </main>
+            <!-- footer-->
+            <footer>
+                <button type="submit" class="submit">제출</button>
+                <button type="reset" class="reset">양식 지우기</button>
+            </footer>
+        </form>
+        
+    </div>
+</body>
+</html>
