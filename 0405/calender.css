@@ -1,0 +1,68 @@
+/* 초기화 코드 */
+body, p, h1{
+    margin: 0;
+}
+
+h1{
+    font-size: initial;
+    font-weight: initial;
+}
+
+/* 꾸미기 코드 */
+.wrapper{
+    width: fit-content;
+    margin:20px auto;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h1{
+    font-size: 100px;
+    font-weight: 700;
+    color:brown
+}
+
+.header div{
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    font-size: 18px;
+    color: gray;
+    font-weight: 500;
+}
+
+.container{
+    display: flex;
+}
+
+.container table{
+    margin: 10px;
+}
+
+caption{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+th{
+    font-size: 15px;
+    padding:0 2px;
+}
+
+td{
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+thead th:nth-child(1),
+tbody td:nth-child(1),
+.sun
+{
+    color : red;
+}
+
