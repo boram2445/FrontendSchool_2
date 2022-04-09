@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat</title>
+    <style>
+        /*animation*/
+        @keyframes 꼬리 {
+            from {
+                transform: rotate(-10deg);
+            }
+
+            to {
+                transform: rotate(-40deg);
+            }
+        }
+        @keyframes 얼굴 {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes 귀오른쪽 {
+            from {
+                transform: rotate(30deg);
+            }
+
+            to {
+                transform: rotate(40deg) translateX(10px);
+            }
+        }
+
+        @keyframes 귀왼쪽 {
+            from {
+                transform: rotate(-30deg);
+            }
+
+            to {
+                transform: rotate(-40deg) translateX(-10px);
+            }
+        }
+
+        @keyframes 눈동자오른쪽 {
+            from {
+                transform: translateX(0px);
+            }
+
+            to {
+                transform: translateX(15px);
+            }
+        }
+
+        @keyframes 눈동자왼쪽 {
+            from {
+                transform: translateX(0px);
+            }
+
+            to {
+                transform: translateX(15px);
+            }
+        }
+
+        @keyframes 입오른쪽 {
+            from {
+                transform: rotate(30deg);
+            }
+
+            to {
+                transform: rotate(40deg);
+            }
+        }
+
+        @keyframes 입왼쪽 {
+            from {
+                transform: rotate(-30deg);
+            }
+
+            to {
+                transform: rotate(-40deg);
+            }
+        }
+        /*setting*/
+        :root{
+            --yellow:#ECD376;
+            --black: #222;
+            --white: rgb(255, 247, 242);
+        }
+        *{
+            box-sizing: border-box;
+        }
+        /*reset*/
+        body{
+            margin:0;
+        }
+        /*design*/
+        body{
+            background: var(--yellow);
+        }
+        .cat{
+            position: relative;
+            width:380px;
+            height: 400px;
+            margin: 200px auto;
+            animation: 얼굴 1s infinite alternate;
+        }
+        .tail{
+            position: absolute;
+            width:300px;
+            top: -50px;
+            right: -50px;
+            animation: 꼬리 1s infinite alternate;
+        }
+        .pattern{
+            position: absolute;
+            width: 120px;
+            height: 40px;
+            background-color: var(--white);
+            border-radius: 52% 48% 46% 54% / 100% 100% 0% 0% ;
+            z-index: 5;
+            top: 169px;
+            left: 129px;
+        }
+        .wrinkle{
+            position: absolute;
+            border: 3px solid rgba(0, 0, 0, 0.8);
+            background-color: var(--black);
+            width: 30px;
+            top: 190px;
+            z-index: 30;
+            transform: rotate(90deg);
+            border-radius: 5px;
+        }
+        .wrinkle.left{
+            left: 165px;
+        }
+        .wrinkle.right{
+            right: 165px;
+            transform: rotate(96deg);
+        }
+        .cat .face{
+            position: absolute;
+            top:80px;
+            background-color:var(--white);
+            width: 380px;
+            height: 310px;
+            border: 8px solid var(--black);
+            border-top: 128px var(--black) solid;
+            border-radius: 45%;
+            box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+        }
+        .cat .ear{
+            position: absolute;
+            width: 90px;
+            height: 100px;
+            background-color: var(--black);
+            border-radius: 50% 50% 56% 44% / 81% 81% 19% 19% ;
+            box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+        }
+        .ear.left{
+            top: 35px;
+            left: 50px;
+            animation: 귀왼쪽 1s infinite alternate;
+        }
+        .ear.right{
+            top: 35px;
+            right: 50px;
+            animation: 귀오른쪽 1s infinite alternate;
+        }
+        .face .line{
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            border-top: var(--black) solid 7px;
+            border-radius: 51% 49% 46% 54% / 15% 15% 85% 85%;
+            border-color:black transparent transparent transparent ;
+            z-index: 10;
+            top: 75px;
+        }
+        .line.left{
+            left:-40px;
+            transform: rotate(-10deg);
+        }
+        .line.left.bottom{
+            top: 95px;
+        }
+        .line.right{
+            right:-40px;
+            transform: rotate(10deg);
+        }
+        .line.right.bottom{
+            top:95px;
+        }
+        .face .eye{
+            position: absolute;
+            width: 90px;
+            height: 70px;
+            background-color: white;
+            border: 7px var(--black) solid;
+            border-radius: 40%;
+            z-index: 20;
+            margin-top: -7px;
+        }
+        .face .eye.left{
+            left:65px;
+        }
+        .face .eye.right{
+            right:65px;
+        }
+        .eye .pupil{
+            position:absolute;
+            width: 70px;
+            height:68px;
+            background-color: var(--black);
+            border-radius: 50%;
+            top: -5px;
+        }
+        .pupil.left{
+            left:-5px;
+            animation: 눈동자왼쪽 1.5s infinite alternate;
+        }
+        .pupil.right{
+            left:-5px;
+            animation: 눈동자오른쪽 1.5s infinite alternate;
+        }
+        .face .nose{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 20px solid;
+            border-color: var(--black) transparent transparent transparent;
+            border-radius: 10px;
+            top: 70px;
+            left:162px;
+        }
+        .mouth{
+            position: absolute;
+            width: 30px;
+            height: 7px;
+            background-color: var(--black);
+            top: 88px;
+            border-radius: 10px;
+        }
+        .mouth.left{
+            left:160px;
+            animation: 입왼쪽 1s infinite alternate;
+        }
+        .mouth.right{
+            right:160px;
+            animation: 입오른쪽 1s infinite alternate;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cat">
+        <img class="tail" src="tail.svg" alt="">
+        <div class="ear left"></div>
+        <div class="ear right"></div>
+        <div class="pattern"></div>
+        <div class="wrinkle left"></div>
+        <div class="wrinkle right"></div>
+        <div class="face">
+            <div class="line left top"></div>
+            <div class="line left bottom"></div>
+            <div class="line right top"></div>
+            <div class="line right bottom"></div>
+            <div class="eye left">
+                <div class="pupil left"></div>
+            </div>
+            <div class="eye right">
+                <div class="pupil right"></div>
+            </div>
+            <div class="nose"></div>
+            <div class="mouth left"></div>
+            <div class="mouth right"></div>
+        </div>
+    </div>
+</body>
+</html>
