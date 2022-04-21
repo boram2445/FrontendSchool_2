@@ -1,0 +1,99 @@
+
+:root{
+    --purple:#711BFF;
+    --white:#FFFFFF;
+    --light-gray:#DBDBDB;
+    --gray: #767676;
+    --black:#000000;
+}
+
+/* reset */
+html, body, h2{
+    margin:0;
+    padding:0;
+}
+
+h2{
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+    cursor: pointer;
+}
+/* blind */
+.blind{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hid
+}
+/* style */
+* { 
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif'; 
+    box-sizing: border-box;
+}
+
+a:hover{
+    opacity: 0.8;
+}
+
+.login{
+    /* 가운데 정렬 */
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    border: 1px var(--light-gray) solid;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.weniv{
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.login_btn{
+    display: block;
+    margin-top: 15px;
+    padding: 10px 0 12px;
+    background-color: var(--purple);
+    color: var(--white);
+    text-align: center;
+    border-radius: 4px;
+}
+
+.login_btn img{
+    vertical-align:text-bottom;
+}
+
+.link_group{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link_wrap img, .join_wrap img{
+    vertical-align: bottom;
+    margin-right: 4px;
+}
+
+.look_link{
+    margin-left:-4px;
+}
+
+.look_link.id::after{
+    margin: 0 4px;
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: var(--gray);
+}
+
