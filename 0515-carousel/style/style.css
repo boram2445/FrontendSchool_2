@@ -1,0 +1,60 @@
+@keyframes bingle {
+  to{
+    transform: rotateY(360deg);
+  }
+}
+
+.stage{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  perspective: 1000px;
+}
+
+.carousel{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: bingle 10s infinite linear;
+}
+
+.panel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+  /* backface-visibility: hidden; */
+}
+
+.panel:nth-child(1){
+  transform: rotateY(0deg) translateZ(200px);
+}
+
+.panel:nth-child(2){
+  transform: rotateY(60deg) translateZ(200px);
+}
+
+.panel:nth-child(3){
+  transform: rotateY(120deg) translateZ(200px);
+}
+
+.panel:nth-child(4){
+  transform: rotateY(180deg) translateZ(200px);
+}
+
+.panel:nth-child(5){
+  transform: rotateY(240deg) translateZ(200px);
+}
+
+.panel:nth-child(6){
+  transform: rotateY(300deg) translateZ(200px);
+}
